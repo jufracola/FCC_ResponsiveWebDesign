@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Survey Form</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1 id="title">Programming Level Survay Form</h1>
+                <p id="description">This survey is intended to know the level of programming knowledge of our users to improve our courses. Thank you for answering!</p>
+                <!-- Wrap labels and form controls in <div class="form-group"> (needed for optimum spacing)
+                Add class .form-control to all textual <input>, <textarea>, and <select> elements -->
+            </header>
+            
+        </div>
+        
+        <form id="survey-form">
+            <div class="form-group">
+            <label for="name-label">Name</label>
+            <input id="name" class="form-control" type="text" placeholder="Enter your name" name="name" required>
+            </div>
+
+            <div class="form-group">
+            <label for="email-label">Email</label>
+            <input id="email" class="form-control" type="email" placeholder="Enter your email" name="email" required>
+            </div>
+
+            <div class="form-group">
+            <label for="number-label">Age <span class="clue"> (Optional)</span></label> <!-- The <span> tag is an inline container used to mark up a part of a text-->
+            <input id="number" class="form-control" type="number" placeholder="Enter your age" name="age" min="0" max="100"> 
+            </div>
+
+            <div class="form-group">
+                <label for="dropdown">How do you see yourself as programmer?</label>
+                <select id="dropdown" class="form-control" name="level" required>
+                <option disabled selected value>Select current level of programing knowledge</option>
+                <option value="nostart">I have not started yet</option>
+                <option value="begginer">Begginer</option>
+                <option value="intermidiate">Intermidiate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+            </div>
+
+            <div class="form-group">
+                <p>Would you take more than one course?</p>
+                <label><input class="input-radio" type="radio" name="user-opinion" value="yes" checked>Yes</label>
+                <label><input class="input-radio" type="radio" name="user-opinion" value="no">No</label>
+                <label><input class="input-radio" type="radio" name="user-opinion" value="maybe">Maybe</label>
+            </div>
+
+            <div class="form-group">
+                <p>What are the next area you want to learn about? <span class="clue"> (Select all that aplies)</span></p>
+                <label><input class="input-checkbox" type="checkbox" name="user-opinion" value="front-end" checked>Front-end</label>
+                <label><input class="input-checkbox" type="checkbox" name="user-opinion" value="back-end">Back-End</label>
+                <label><input class="input-checkbox" type="checkbox" name="user-opinion" value="data-science">Data Science</label>
+                <label><input class="input-checkbox" type="checkbox" name="user-opinion" value="ai">Artificial Intelligence (AI)</label>
+            </div>
+
+            <div class="form-group">
+            <label>Any comments or suggestion?</label>
+            <textarea id="comments" class="form-control" placeholder="Enter your comment..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                  Submit
+                </button>
+            </div>
+        </form>
+    </body>
+</html>
